@@ -9,9 +9,23 @@ import {
 	FormControl
 } from 'react-bootstrap'
 
-function Signup (props) {
-
+function Signup () {
+	
 	const [credenciales, setCredenciales] = useState( {username: "", password: ""});
+  
+	const onSignupClick = () => {
+    const userData = {
+      username: credenciales.username,
+      password: credenciales.password
+    };
+    console.log("Sign up " + userData.username + " " + userData.password);		
+  }
+
+	const handleChange = (event) => {
+		console.log('entro a cambio')
+    setCredenciales({ ...credenciales, [event.target.name]: event.target.value });
+  };
+
   return (
 	<Container>
 		<Row>
@@ -24,8 +38,8 @@ function Signup (props) {
 							type="text"
 							name="username"
 							placeholder="Enter user name"
-							value={props.username}
-							onChange={props.onChange}
+							value={credenciales['username']}
+							onChange={handleChange}
 						/>
 						<FormControl.Feedback type="invalid"></FormControl.Feedback>
 					</Form.Group>
@@ -36,8 +50,9 @@ function Signup (props) {
 							type="password"
 							name="password"
 							placeholder="Enter password"
-							value={props.password}
-							onChange={props.onChange}
+							value={credenciales['password']}
+							onChange={handleChange} 
+
 						/>
 						<Form.Control.Feedback type="invalid"></Form.Control.Feedback>
 					</Form.Group>
@@ -45,7 +60,7 @@ function Signup (props) {
 				<Button
 					className="mt-2"
 					color="primary"
-					onClick={props.onSignupClick}  
+					onClick={onSignupClick}  
 				>Sign up</Button>
 				<p className="mt-2">
 					Already have account? <Link to="/login">Login</Link>

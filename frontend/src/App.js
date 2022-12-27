@@ -1,4 +1,5 @@
 import './App.css';
+import React from "react";
 import Boton from './components/Boton';
 import Dashboard from './components/dashboard/Dashboard';
 import { BrowserRouter, Route, Routes } from "react-router-dom";

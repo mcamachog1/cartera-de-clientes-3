@@ -14,7 +14,7 @@ function Home() {
       </p>
       <p>
         <Link to="/dashboard">Dashboard</Link>
-      </p>			
+      </p>	
 		</Container>
 	)
 }
