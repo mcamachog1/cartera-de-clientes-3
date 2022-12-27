@@ -28,7 +28,14 @@ cd server
 python manage.py runserver
 
 # FRONTEND
-
+cd ../../frontend
+# borrar archivos y carpetas
+  package-lock.json
+  package.json
+  public/
+  src/
+# ir al directorio raiz del proyecto
+cd ..
 npx create-react-app frontend
 cd frontend
 npm start
