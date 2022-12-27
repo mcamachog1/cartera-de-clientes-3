@@ -7,6 +7,11 @@ https://www.agirl.codes/complete-guide-build-react-forms-with-usestate-hook
 
 # Pasos para configurar el ambiente para correr el proyecto
 
+# FRONTEND
+npx create-react-app frontend
+cd frontend
+npm start
+
 git clone https://github.com/mcamachog1/cartera-de-clientes-3.git
 
 # BACKEND
@@ -27,16 +32,5 @@ cd server
 # run development server 
 python manage.py runserver
 
-# FRONTEND
-cd ../../frontend
-# borrar archivos y carpetas
-  package-lock.json
-  package.json
-  public/
-  src/
-# ir al directorio raiz del proyecto
-cd ..
-npx create-react-app frontend
-cd frontend
-npm start
+
 
